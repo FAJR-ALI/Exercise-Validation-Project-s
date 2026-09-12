@@ -12,6 +12,7 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("api/v1/event")
 public class EventController {
+    
     ArrayList<Event> events = new ArrayList<>();
 
     @PostMapping("/add")

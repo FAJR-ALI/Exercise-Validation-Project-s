@@ -38,7 +38,7 @@ public class ValidationController {
         }
         if(index >= projects.size() || index < 0 ){
             String message = errors.getFieldError().getDefaultMessage();
-            return ResponseEntity.status(400).body(message);
+            return ResponseEntity.status(400).body("Enter a Valid Project Number");
         }
         projects.set(index, newProject);
         return ResponseEntity.status(200).body("Project Updated Successfully ");
@@ -102,9 +102,5 @@ public class ValidationController {
         }
         return ResponseEntity.status(200).body(sameCompanyPro);
     }
-
-
-
-
 
 }
